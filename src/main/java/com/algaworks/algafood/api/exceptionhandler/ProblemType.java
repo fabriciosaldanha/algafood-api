@@ -5,13 +5,12 @@ import lombok.Getter;
 @Getter
 public enum ProblemType {
 
-    MENSAGEM_IMCOMPREENSIVEL("/mensagem-incompreensivel", "Mensagem incompreensível."),
+    ERRO_DE_SISTEMA("/erro-de-sistema", "Erro de sistema"),
     PARAMETRO_INVALIDO("/parametro-invalido", "Parâmetro inválido"),
-
-    RECURSO_NAO_ENCONTRADO("/recurso-nao-encontrado", "Recurso não encontrado."),
-    ENTIDADE_EM_USO("/entidade-em-uso", "Entidade em uso."),
-    ERRO_NEGOCIO("/erro-negocio", "Violação de regra de negócio."),
-    ERRO_DE_SISTEMA( "/erro-de-sistema", "Erro de sistema." );
+    MENSAGEM_INCOMPREENSIVEL("/mensagem-incompreensivel", "Mensagem incompreensível"),
+    RECURSO_NAO_ENCONTRADO("/recurso-nao-encontrado", "Recurso não encontrado"),
+    ENTIDADE_EM_USO("/entidade-em-uso", "Entidade em uso"),
+    ERRO_NEGOCIO("/erro-negocio", "Violação de regra de negócio");
 
     private String title;
     private String uri;
@@ -20,4 +19,5 @@ public enum ProblemType {
         this.uri = "https://algafood.com.br" + path;
         this.title = title;
     }
+
 }
